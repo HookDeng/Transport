@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"	
+    style="@style/layout_full"
+    android:orientation="vertical"
+    android:background="@color/white">	 
+    <FrameLayout
+    	android:id="@+id/activity_group_container"
+		style="@style/layout_vertical"
+		android:orientation="vertical"    	
+		android:layout_weight="1.0">	 
+    </FrameLayout>
+    <RadioGroup
+    	style="@style/bottombar_radioGroup"
+    	android:id="@+id/activity_group_radioGroup"
+    	android:checkedButton="@+id/activity_group_radioButton0"
+    	android:layout_height="56dp">
+    	<RadioButton
+	       style="@style/bottombar_radioButton"
+    	   android:id="@id/activity_group_radioButton0"/> 
+	    <RadioButton
+	       style="@style/bottombar_radioButton"
+	       android:id="@+id/activity_group_radioButton1"/>
+	    <RadioButton
+	       style="@style/bottombar_radioButton"
+	       android:id="@+id/activity_group_radioButton11"/>
+	    <RadioButton
+	       style="@style/bottombar_radioButton"
+	       android:id="@+id/activity_group_radioButton2"/>
+	    <RadioButton
+	       style="@style/bottombar_radioButton"
+	       android:id="@+id/activity_group_radioButton3"/>
+    </RadioGroup>
+</LinearLayout>

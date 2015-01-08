@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="content_bg">#e1e1e1</color>
+	<color name="sub_title">#AAAAAA</color>
+	<color name="white">#ffffff</color>
+	<color name="black">#000000</color>
+	<color name="transparent">#00000000</color>
+	<color name="half_transparent">#b0000000</color>
+	<color name="orange">#FFAA00</color>
+	<color name="green">#4AD100</color>
+	<color name="dark_orange">#DD9500</color>
+	<color name="warm_gray">#808069</color>
+	<color name="home_text">#888888</color>
+	<color name="yellow">#FF9900</color>
+	
+	<color name="deep_green">#76D033</color>
+	<color name="gray_bg">#FAFAFA</color>
+	
+	
+	<color name="light_gray">#CECECE</color>
+	<color name="dark_gray">#191919</color>
+	
+	<color name="home_text1">#B7D4EA</color>
+	<color name="home_text2">#F7C08D</color>
+	<color name="home_text3">#C9E28E</color>
+	
+	<color name="account_text1">#FF8817</color>
+	
+	<color name="account_finance_text1">#8E8E8E</color>
+	<color name="account_finance_text2">#70707A</color>
+	<color name="account_finance_text3">#86AAFF</color>
+	<color name="account_finance_text4">#45BFFF</color>
+	<color name="account_finance_text5">#F4B613</color>
+	<color name="account_finance_text6">#FC5366</color>
+	<color name="account_finance_text7">#0094D9</color>
+	<color name="account_finance_text8">#57B69A</color>
+	
+	<color name="account_manage_finance_text1">#FF8500</color>
+	<color name="account_manage_finance_text2">#93C51D</color>
+	
+	<color name="account_fund_text1">#35C7CA</color>
+	<color name="account_fund_text2">#63C67E</color>
+	
+	<color name="light_orange">#FDC620</color>
+	
+	
+	<color name="DARK_ORANGE">#FF8C00</color>
+	<color name="DarkTurquoise">#00CED1</color>
+	<color name="blue">#4C97CF</color>
+	<color name="RED">#A40000</color>
+	
+	<color name="help_center_bg">#F5F5F5</color>
+	<color name="help_center_helptitle">#2A2824</color>
+	<color name="help_center_helpinfo">#474747</color>
+	
+	<color name="feedback_dialog_item_press">#C3C3C3</color>
+	<color name="dialog_button_press">#FFAA00</color>
+	
+	<color name="color_help_center_item_datetime">#FCFCFC</color>
+	
+	<drawable name="orange">#FFA200</drawable> 
+	<drawable name="black">#000000</drawable> 
+</resources>

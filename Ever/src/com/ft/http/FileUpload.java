@@ -1,4 +1,5 @@
-package com.hook.http;
+package com.ft.http;
+
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,6 +7,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -18,19 +20,19 @@ import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.os.AsyncTask;
+
+import com.ft.AtrApplication;
+import com.ft.ever.utils.Log;
+import com.ft.ever.utils.ToastUtil;
+import com.ft.http.FileUploadProgressEntity.ProgressListener;
+import com.hook.ever.BuildConfig;
 import com.loopj.android.http.RequestParams;
-import com.yrz.atourong.BuildConfig;
-import com.yrz.atourong.AtrApplication;
-import com.yrz.atourong.db.UserInfo;
-import com.yrz.atourong.http.FileUploadProgressEntity.ProgressListener;
-import com.yrz.atourong.utils.FileUtils;
-import com.yrz.atourong.utils.Log;
-import com.yrz.atourong.utils.ToastUtil;
 
 public class FileUpload extends AsyncTask<File[], Object, Integer> {
 	public static final int STATUS_FAILURE = 0;
@@ -46,7 +48,7 @@ public class FileUpload extends AsyncTask<File[], Object, Integer> {
 	private ProgressDialog mProgressDialog;
 	private String mEvId;
 	private OnUploadedListener mUploadListener;
-	private UserInfo mUserInfo;
+//	private UserInfo mUserInfo;
 	protected AtrApplication mApplication;
 	
 	/**
@@ -66,7 +68,7 @@ public class FileUpload extends AsyncTask<File[], Object, Integer> {
 	public FileUpload(Activity context) {
 		mContext = context;
 		mApplication = (AtrApplication) mContext.getApplication();
-		mUserInfo = mApplication.mUserInfo;
+//		mUserInfo = mApplication.mUserInfo;
 		mProgressDialog = new ProgressDialog(mContext);
 		mProgressDialog.setMax(100);
 		mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
@@ -241,11 +243,11 @@ public class FileUpload extends AsyncTask<File[], Object, Integer> {
 	private JSONObject uploadFile(final File file) throws JSONException, FileNotFoundException {
 		String url = "mod=cFile&act=saveFolderFile";
 		RequestParams rq = new RequestParams();
-		rq.put("oauth_token", mUserInfo.getToken());
-		rq.put("oauth_token_secret", mUserInfo.getSecret());
-		rq.put("Filedata", file);
+//		rq.put("oauth_token", mUserInfo.getToken());
+//		rq.put("oauth_token_secret", mUserInfo.getSecret());
+//		rq.put("Filedata", file);
 		rq.put("folder_name", file.getParentFile().getName());
-		rq.put("attach_type", FileUtils.getAttacheType(file.getName()));
+//		rq.put("attach_type", FileUtils.getAttacheType(file.getName()));
 		String result = UPGSyncHttpClient.INSTANCE.post(url, rq);
 		return new JSONObject(result);
 	}
@@ -258,11 +260,11 @@ public class FileUpload extends AsyncTask<File[], Object, Integer> {
 		FileUploadProgressEntity entity = new FileUploadProgressEntity(listener);
 		mHttpPost = new HttpPost(UPGHttpClient.getAbsoluteUrl(url));
 		try {
-			entity.addPart("oauth_token", new StringBody(mUserInfo.getToken(), Charset.forName("UTF-8")));
-			entity.addPart("oauth_token_secret", new StringBody(mUserInfo.getSecret(), Charset.forName("UTF-8")));
+//			entity.addPart("oauth_token", new StringBody(mUserInfo.getToken(), Charset.forName("UTF-8")));
+//			entity.addPart("oauth_token_secret", new StringBody(mUserInfo.getSecret(), Charset.forName("UTF-8")));
 			entity.addPart("ev_id", new StringBody(evId, Charset.forName("UTF-8")));
 			entity.addPart("is_related_evidence", new StringBody("1", Charset.forName("UTF-8")));
-			entity.addPart("attach_type", new StringBody(FileUtils.getAttacheType(file.getName()), Charset.forName("UTF-8")));
+//			entity.addPart("attach_type", new StringBody(FileUtils.getAttacheType(file.getName()), Charset.forName("UTF-8")));
 			entity.addPart("Filedata", new FileBody(file));
 			mHttpPost.setEntity(entity);
 			HttpResponse response = mHttpClient.execute(mHttpPost, mHttpContext);

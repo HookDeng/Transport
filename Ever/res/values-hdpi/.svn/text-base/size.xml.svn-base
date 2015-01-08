@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <integer name="left_size">30</integer>
+   <integer name="left_size_re">40</integer>
+   <string name="url">url_s100</string>
+    <style name="repay_backtext_size">
+       <item name="android:textSize">14sp</item>
+   </style>
+      <style name="home_time">
+       <item name="android:textSize">55sp</item>
+   </style>
+</resources>

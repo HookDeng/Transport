@@ -1,9 +1,10 @@
-package com.hook.http;
+package com.ft.http;
 
+import android.util.Log;
+
+import com.hook.ever.BuildConfig;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.SyncHttpClient;
-import com.yrz.atourong.BuildConfig;
-import com.yrz.atourong.utils.Log;
 
 public class UPGSyncHttpClient extends SyncHttpClient {
 	public static final UPGSyncHttpClient INSTANCE = new UPGSyncHttpClient();

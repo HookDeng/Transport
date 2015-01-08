@@ -1,6 +1,7 @@
-package com.hook.http;
+package com.ft.http;
 
 import java.io.FilterOutputStream;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.Charset;

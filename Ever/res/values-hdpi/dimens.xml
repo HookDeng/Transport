@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   	<string name="dimens_home_top_weight">1.3</string>
+   	<dimen name="dimens_home_activity_height">31dp</dimen>
+   	<dimen name="dimens_home_top_type">18sp</dimen>
+   	<dimen name="dimens_home_top_percent">38sp</dimen>
+   	<dimen name="dimens_home_top_percent_right_marginbottom">10dp</dimen>
+    <dimen name="dimens_home_month_padding">12dp</dimen>
+    <dimen name="dimens_home_month_key">12sp</dimen>
+    <dimen name="dimens_home_month_value">16sp</dimen>
+    <dimen name="dimens_home_timer_margin">16dp</dimen>
+    <dimen name="dimens_home_submit_margin">14dp</dimen>
+    <dimen name="dimens_home_submit_margin_top">23dp</dimen>
+    <dimen name="dimens_home_submit_textsize">20sp</dimen>
+    <dimen name="dimens_home_submit_padding">9dp</dimen>
+    <dimen name="dimens_home_bottom_textsize">14sp</dimen>
+    <dimen name="dimens_home_submit_height">45dp</dimen>
+    
+    <string name="dimens_home_guess_bottom_weight">5.4</string>
+    <dimen name="dimens_home_guess_bottom_padding">7dp</dimen>
+    <dimen name="dimens_home_guess_grid_item_text">14sp</dimen>
+    
+    <dimen name="dimens_account_bottom_ll">42dp</dimen>
+    <dimen name="dimens_account_bottom_textsize">18sp</dimen>
+    <dimen name="dimens_account_margin_top_left">5dp</dimen>
+    <dimen name="dimens_account_alert_green_textsize">12sp</dimen>
+    <dimen name="dimens_account_alert_green_margin">5dp</dimen>
+    <dimen name="dimens_account_alert_green_ll_margin">2dp</dimen>
+    <dimen name="dimens_account_middle_value_size">16sp</dimen>
+    <dimen name="dimens_account_middle_margin">3dp</dimen>
+    
+    <dimen name="dimens_account_pay_pwd_margin">5dp</dimen>
+    
+    <dimen name="dimens_move_zone_textsize">12sp</dimen>
+    <dimen name="dimens_move_zone_value_textsize">12sp</dimen>
+    
+    <dimen name="dimens_first_bottom_height">62dp</dimen>
+    <dimen name="dimens_first_bottom_margin">3dp</dimen>
+</resources>

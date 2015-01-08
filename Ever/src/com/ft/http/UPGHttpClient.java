@@ -7,16 +7,23 @@
  * 
  */
 
-package com.hook.http;
+package com.ft.http;
 
 import org.apache.http.HttpEntity;
+
+import android.app.Activity;
 import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.telephony.TelephonyManager;
 import android.util.Log;
+
+import com.hook.ever.BuildConfig;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.BinaryHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
-import com.yrz.atourong.BuildConfig;
 
 /**
  * 
@@ -56,6 +63,12 @@ public class UPGHttpClient {
         ASYNC_HTTP_CLIENT.get(absoluteUrl, responseHandler);
     }
 
+    public static void post(Activity activity, String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
+    	String absoluteUrl = getAbsoluteUrl(url,activity);
+    	if(BuildConfig.DEBUG) Log.d("UPGHttpClient",String.format("%s&%s", absoluteUrl, params));
+        ASYNC_HTTP_CLIENT.post(absoluteUrl, params, responseHandler);
+    }
+    
     /**
      * 把数据post到服务器上
      * @param url 相对地址，此方法会直接添加服务器前缀"http://xxxxxxx/index.php?app=api&"
@@ -95,4 +108,26 @@ public class UPGHttpClient {
     	}
     }
 	
+    
+    public static String getAbsoluteUrl(String relativeUrl,Activity activity) {
+    	PackageManager manager = activity.getPackageManager();
+    	ApplicationInfo app_info = null;
+    	PackageInfo pack_info = null;
+		try {
+			app_info = manager.getApplicationInfo(activity.getPackageName(),PackageManager.GET_META_DATA);
+			pack_info = manager.getPackageInfo(activity.getPackageName(), 0);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		String brand = android.os.Build.BRAND;//手机品牌
+		String version = pack_info.versionName;
+    	String channel = app_info.metaData.getString("UMENG_CHANNEL");
+    	TelephonyManager tm = (TelephonyManager) activity.getSystemService(Context.TELEPHONY_SERVICE);
+		String DEVICE_ID = tm.getDeviceId();
+    	if(BuildConfig.DEBUG) {
+    		return DEBUG_BASE_URL + relativeUrl + "?app_version=" + version + "&hmsr=" + channel + "&brand=" + brand + "&deviceId=" + DEVICE_ID;
+    	} else {
+    		return DEBUG_BASE_URL + relativeUrl + "?app_version=" + version + "&hmsr=" + channel + "&brand=" + brand + "&deviceId=" + DEVICE_ID;
+    	}
+    }	
 }
