@@ -20,7 +20,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
-import com.hook.ever.R;
+import com.ft.ever.R;
 
 /** 继承该类并实现其五个抽象方法即可 */
 public abstract class AbsActivityGroup extends ActivityGroup{

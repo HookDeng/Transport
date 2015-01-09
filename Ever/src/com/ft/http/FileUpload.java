@@ -28,10 +28,10 @@ import android.content.DialogInterface.OnCancelListener;
 import android.os.AsyncTask;
 
 import com.ft.AtrApplication;
+import com.ft.ever.BuildConfig;
 import com.ft.ever.utils.Log;
 import com.ft.ever.utils.ToastUtil;
 import com.ft.http.FileUploadProgressEntity.ProgressListener;
-import com.hook.ever.BuildConfig;
 import com.loopj.android.http.RequestParams;
 
 public class FileUpload extends AsyncTask<File[], Object, Integer> {

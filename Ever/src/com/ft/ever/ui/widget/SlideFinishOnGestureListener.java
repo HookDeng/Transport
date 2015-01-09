@@ -9,8 +9,8 @@ import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
 import android.view.WindowManager;
 
+import com.ft.ever.R;
 import com.ft.ever.ui.base.FTActivity;
-import com.hook.ever.R;
 
 public class SlideFinishOnGestureListener implements OnGestureListener {
 	//mdpi下的比例计算;

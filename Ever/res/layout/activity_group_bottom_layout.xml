@@ -20,14 +20,17 @@
 	    <RadioButton
 	       style="@style/bottombar_radioButton"
 	       android:id="@+id/activity_group_radioButton1"/>
-	    <RadioButton
+	    <!--  <RadioButton
 	       style="@style/bottombar_radioButton"
-	       android:id="@+id/activity_group_radioButton11"/>
+	       android:id="@+id/activity_group_radioButton11"/>-->
 	    <RadioButton
 	       style="@style/bottombar_radioButton"
 	       android:id="@+id/activity_group_radioButton2"/>
 	    <RadioButton
 	       style="@style/bottombar_radioButton"
 	       android:id="@+id/activity_group_radioButton3"/>
+	    <RadioButton
+	       style="@style/bottombar_radioButton"
+	       android:id="@+id/activity_group_radioButton4"/>
     </RadioGroup>
 </LinearLayout>

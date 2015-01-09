@@ -2,7 +2,7 @@ package com.ft.http;
 
 import android.util.Log;
 
-import com.hook.ever.BuildConfig;
+import com.ft.ever.BuildConfig;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.SyncHttpClient;
 

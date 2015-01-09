@@ -12,10 +12,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.ft.ever.BuildConfig;
 import com.ft.ever.utils.Log;
 import com.ft.ever.utils.NetUtils;
 import com.ft.http.UPGHttpClient;
-import com.hook.ever.BuildConfig;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 

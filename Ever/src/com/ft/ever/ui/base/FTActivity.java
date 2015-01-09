@@ -1,8 +1,6 @@
 package com.ft.ever.ui.base;
 
 
-import java.util.Date;
-
 import android.app.Dialog;
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
@@ -23,12 +21,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ft.AtrApplication;
+import com.ft.ever.R;
 import com.ft.ever.ui.widget.SlideFinishOnGestureListener;
 import com.ft.ever.ui.widget.SlideFinishOnGestureListener.SlideDirection;
 import com.ft.ever.utils.NetUtils;
 import com.ft.http.UPGHttpClient;
 import com.ft.impl.BroadCastImpl;
-import com.hook.ever.R;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
